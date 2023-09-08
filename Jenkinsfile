@@ -32,6 +32,13 @@ pipeline{
             steps {
                 echo 'Deploying the app'
             }
+            post {
+                success {
+                    mail to: "sudaksh77@gmail.com",
+                    subject: "Build Status - Success on Staging",
+                    body: "The build has been completed successfully on Staging"
+                }
+            }
         }
 
         stage('Integration Tests on Staging'){
@@ -43,6 +50,13 @@ pipeline{
         stage('Deploy to Production'){
             steps {
                 echo 'Deploying the app'
+            }
+            post {
+                success {
+                    mail to: "sudaksh77@gmail.com",
+                    subject: "Build Status - Success on Production",
+                    body: "The build has been completed successfully on Production"
+                }
             }
         }
     }
