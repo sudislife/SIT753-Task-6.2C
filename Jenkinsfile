@@ -4,14 +4,14 @@ pipeline{
         stage('Build'){
             steps {
                 echo 'Building the application'
-                sh 'python say_hello.py'
+                sh 'python3 say_hello.py'
             }
         }
 
         stage('Unit and Integration Tests'){
             steps {
                 echo 'Testing the app'
-                sh 'python uat_test.py'
+                sh 'python3 uat_test.py'
             }
         }
 
