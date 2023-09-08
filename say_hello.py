@@ -1,3 +1,7 @@
+"""
+This module provides a simple function for saying hello.
+"""
+
 def say_hello():
     """
     This function prints a simple greeting message.
