@@ -5,7 +5,7 @@ def say_hello():
     Returns:
         str: The greeting message.
     """
-    str1 = 'Hello World! :grinning_face_with_big_eyes:'
+    str1 = 'Hello World!'
     print(str1)
     return str1
 
